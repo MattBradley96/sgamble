@@ -4,8 +4,8 @@ import { countries, Country } from "../domain/locs";
 
 export function useCountry(dayString: string): [Country, number, number] {
   const country = useMemo(() => {
-    return (countries[0]);
-    // return (countries[Math.floor(seedrandom.alea(dayString)() * countries.length)]);
+    // return (countries[0]);
+    return (countries[Math.floor(seedrandom.alea(dayString)() * countries.length)]);
   }, [dayString]);
 
   const randomAngle = useMemo(
