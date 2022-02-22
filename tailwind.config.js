@@ -28,6 +28,11 @@ module.exports = {
         reveal: "reveal 200ms forwards",
         pop: "pop 500ms ease-out forwards",
       },
+      colors: {
+          blue:{
+            950: '#91B9A4',
+        },
+      },
     },
   },
   plugins: [],

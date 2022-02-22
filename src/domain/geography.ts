@@ -70,9 +70,11 @@ export function formatDistance(
   distanceInMeters: number,
   distanceUnit: "km" | "miles"
 ) {
-  const distanceInKm = distanceInMeters / 1000;
+  const distanceInKm = distanceInMeters/1000;
 
-  return distanceUnit === "km"
+  // const dist =
+
+  return distanceInMeters > 10000
     ? `${Math.round(distanceInKm)}km`
-    : `${Math.round(distanceInKm * 0.621371)}mi`;
+    : `${Math.round(distanceInMeters)}m`;
 }

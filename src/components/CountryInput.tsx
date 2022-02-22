@@ -3,10 +3,12 @@ import React, { useState } from "react";
 import Autosuggest from "react-autosuggest";
 import { useTranslation } from "react-i18next";
 import {
+  Country,
   countries,
   getCountryName,
+  getCityName,
   sanitizeCountryName,
-} from "../domain/countries";
+} from "../domain/locs";
 
 interface CountryInputProps {
   inputRef: React.RefObject<HTMLInputElement>;
@@ -27,18 +29,32 @@ export function CountryInput({
     <Autosuggest
       suggestions={suggestions}
       onSuggestionsFetchRequested={({ value }) =>
+        // setSuggestions(
+        //   countries
+        //     .map((c) => getCountryName(i18n.resolvedLanguage, c).toUpperCase().concat(", ".concat(getCityName(i18n.resolvedLanguage, c).toUpperCase())))
+        //     .filter((countryName) =>
+        //       sanitizeCountryName(countryName).includes(
+        //         sanitizeCountryName(value)
+        //       )
+        //     )
+        // )
         setSuggestions(
           countries
-            .map((c) => getCountryName(i18n.resolvedLanguage, c).toUpperCase())
-            .filter((countryName) =>
-              sanitizeCountryName(countryName).includes(
+            .filter((c:Country) =>
+              sanitizeCountryName(getCountryName(i18n.resolvedLanguage, c)).includes(
                 sanitizeCountryName(value)
               )
-            )
+          ).concat(countries
+            .filter((c:Country) =>
+              sanitizeCountryName(getCityName(i18n.resolvedLanguage, c)).includes(
+                sanitizeCountryName(value)
+              )
+          ))
+            .map((c) => getCountryName(i18n.resolvedLanguage, c).toUpperCase())
         )
       }
       onSuggestionsClearRequested={() => setSuggestions([])}
-      getSuggestionValue={(suggestion) => suggestion}
+      getSuggestionValue={(suggestion) => suggestion} //when clicked take the suggestion value
       renderSuggestion={(suggestion) => (
         <div className="border-2 dark:bg-slate-800 dark:text-slate-100">
           {suggestion}

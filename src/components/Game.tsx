@@ -11,7 +11,7 @@ import {
   countries,
   getCountryName,
   sanitizeCountryName,
-} from "../domain/countries";
+} from "../domain/locs";
 import { useGuesses } from "../hooks/useGuesses";
 import { CountryInput } from "./CountryInput";
 import * as geolib from "geolib";
@@ -113,18 +113,17 @@ export function Game({ settingsData }: GameProps) {
       )}
       <div className="my-1">
         <img
-          className={`max-h-52 m-auto transition-transform duration-700 ease-in dark:invert ${
-            hideImageMode && !gameEnded ? "h-0" : "h-full"
-          }`}
-          alt="country to guess"
-          src={`images/countries/${country.code.toLowerCase()}/vector.svg`}
-          style={
-            rotationMode && !gameEnded
-              ? {
-                  transform: `rotate(${randomAngle}deg) scale(${imageScale})`,
-                }
-              : {}
-          }
+          // className={`max-h-52 m-auto transition-transform duration-700 ease-in dark:invert ${
+          //   hideImageMode && !gameEnded ? "h-0" : "h-full"
+          // }`}
+          // alt="country to guess"
+          // style={
+          //   rotationMode && !gameEnded
+          //     ? {
+          //         transform: `rotate(${randomAngle}deg) scale(${imageScale})`,
+          //       }
+          //     : {}
+          // }
         />
       </div>
       {rotationMode && !hideImageMode && !gameEnded && (
@@ -154,10 +153,6 @@ export function Game({ settingsData }: GameProps) {
             />
             <a
               className="underline w-full text-center block mt-4"
-              href={`https://www.google.com/maps?q=${getCountryName(
-                i18n.resolvedLanguage,
-                country
-              )}+${country.code.toUpperCase()}&hl=${i18n.resolvedLanguage}`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -176,7 +171,7 @@ export function Game({ settingsData }: GameProps) {
                 className="border-2 uppercase my-0.5 hover:bg-gray-50 active:bg-gray-100 dark:hover:bg-slate-800 dark:active:bg-slate-700"
                 type="submit"
               >
-                🌍 {t("guess")}
+                🍑 {t("guess")} 🐝
               </button>
             </div>
           </form>
