@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/chadle/static/css/main.44b84c98.css",
+    "main.js": "/chadle/static/js/main.e6f198c2.js",
+    "static/js/787.e562568f.chunk.js": "/chadle/static/js/787.e562568f.chunk.js",
+    "service-worker.js": "/chadle/service-worker.js",
+    "index.html": "/chadle/index.html",
+    "main.44b84c98.css.map": "/chadle/static/css/main.44b84c98.css.map",
+    "main.e6f198c2.js.map": "/chadle/static/js/main.e6f198c2.js.map",
+    "787.e562568f.chunk.js.map": "/chadle/static/js/787.e562568f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.44b84c98.css",
+    "static/js/main.e6f198c2.js"
+  ]
+}
