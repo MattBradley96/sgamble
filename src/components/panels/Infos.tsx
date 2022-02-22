@@ -18,9 +18,9 @@ export function Infos({ isOpen, close, settingsData }: InfosProps) {
         <div>
           Guess the <Worldle /> in 6 guesses.
         </div>
-        <div>Each guess must be a valid date location or place we've visited. </div>
+        <div>Each guess must be a place we've visited together. </div>
         <div>
-          After each guess, you will have the distance, the direction and the
+          After each guess, you will be given the distance, direction and
           proximity from your guess and the target location.
         </div>
       </div>

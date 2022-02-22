@@ -68,7 +68,7 @@ export function Game({ settingsData }: GameProps) {
       );
 
       if (guessedCountry == null) {
-        toast.error(t("unknownCountry"));
+        toast.error(t("Not a location on the list!"));
         return;
       }
 

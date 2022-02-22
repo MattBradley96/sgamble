@@ -13,7 +13,7 @@ export function useGuesses(
       const newGuesses = [...guesses, newGuess];
 
       setGuesses(newGuesses);
-      saveGuesses(dayString, newGuesses);
+      // saveGuesses(dayString, newGuesses);
     },
     [dayString, guesses]
   );
