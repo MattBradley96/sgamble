@@ -28,36 +28,6 @@ interface InstallButtonProps {
 export function InstallButton({ pwaInstall }: InstallButtonProps) {
   const { t } = useTranslation();
 
-  return (
-    <button
-      className="mr-3 text-xl"
-      type="button"
-      onClick={() =>
-        pwaInstall({
-          title: t("install.title"),
-          descritpionTitle: t("install.descritpionTitle"),
-          description: t("install.description"),
-          instructionTitle: t("install.instructionTitle"),
-          instructionActionOk: t("install.instructionActionOk"),
-          instructionActionCancel: t("install.instructionActionCancel"),
-          instructionActionInstall: t("install.instructionActionInstall"),
-          instructionFirefoxAction1: t("install.instructionFirefoxAction1"),
-          instructionFirefoxAction2: t("install.instructionFirefoxAction2"),
-          instructionFirefoxNewAction1: t(
-            "install.instructionFirefoxNewAction1"
-          ),
-          instructionFirefoxNewAction2: t(
-            "install.instructionFirefoxNewAction2"
-          ),
-          instructionIdeviceAction1: t("install.instructionIdeviceAction1"),
-          instructionIdeviceAction2: t("install.instructionIdeviceAction2"),
-          instructionOperaAction1: t("install.instructionOperaAction1"),
-          instructionOperaAction2: t("install.instructionOperaAction2"),
-          instructionNotSupported: t("install.instructionNotSupported"),
-        })
-      }
-    >
-      📲
-    </button>
+  return (null
   );
 }

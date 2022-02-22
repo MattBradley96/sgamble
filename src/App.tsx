@@ -3,6 +3,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { Game } from "./components/Game";
 import React, { useEffect, useState } from "react";
 import { Infos } from "./components/panels/Infos";
+import { Card } from "./components/panels/Card";
 import { useTranslation } from "react-i18next";
 import { InfosFr } from "./components/panels/InfosFr";
 import { Settings } from "./components/panels/Settings";
@@ -18,6 +19,7 @@ function App() {
   const { pwaInstall, supported, isInstalled } = useReactPWAInstall();
 
   const [infoOpen, setInfoOpen] = useState(false);
+  const [cardOpen, setCardOpen] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [statsOpen, setStatsOpen] = useState(false);
 
@@ -54,6 +56,10 @@ function App() {
           settingsData={settingsData}
         />
       )}
+      <Card
+        isOpen={cardOpen}
+        close={() => setCardOpen(false)}
+      />
       <Settings
         isOpen={settingsOpen}
         close={() => setSettingsOpen(false)}
@@ -74,6 +80,13 @@ function App() {
               onClick={() => setInfoOpen(true)}
             >
               ❔
+            </button>
+            <button
+              className="mr-3 text-xl"
+              type="button"
+              onClick={() => setCardOpen(true)}
+            >
+              💌
             </button>
             {supported() && !isInstalled() && (
               <InstallButton pwaInstall={pwaInstall} />

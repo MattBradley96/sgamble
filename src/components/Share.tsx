@@ -71,7 +71,7 @@ export function Share({
         format: "text/plain",
       }}
     >
-      <button className="border-2 px-4 uppercase bg-green-600 hover:bg-green-500 active:bg-green-700 text-white w-full">
+      <button className="border-2 px-4 uppercase bg-blue-950 hover:bg-green-500 active:bg-green-700 text-white w-full">
         {t("share")}
       </button>
     </CopyToClipboard>

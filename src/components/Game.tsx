@@ -57,6 +57,16 @@ export function Game({ settingsData }: GameProps) {
     guesses.length === MAX_TRY_COUNT ||
     guesses[guesses.length - 1]?.distance === 0;
 
+  // const handleSubmit = useCallback(
+  //   (e: React.FormEvent<HTMLFormElement>) => {
+  //     e.preventDefault();
+  //     const guessedCountry = countries.find(
+  //       (country) =>
+  //         sanitizeCountryName(
+  //           getCountryName(i18n.resolvedLanguage, country)
+  //         ) === sanitizeCountryName(currentGuess)
+  //     );
+
   const handleSubmit = useCallback(
     (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
@@ -156,7 +166,7 @@ export function Game({ settingsData }: GameProps) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {t("showOnGoogleMaps")}
+              {t("")}
             </a>
           </>
         ) : (

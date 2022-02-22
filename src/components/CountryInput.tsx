@@ -29,15 +29,6 @@ export function CountryInput({
     <Autosuggest
       suggestions={suggestions}
       onSuggestionsFetchRequested={({ value }) =>
-        // setSuggestions(
-        //   countries
-        //     .map((c) => getCountryName(i18n.resolvedLanguage, c).toUpperCase().concat(", ".concat(getCityName(i18n.resolvedLanguage, c).toUpperCase())))
-        //     .filter((countryName) =>
-        //       sanitizeCountryName(countryName).includes(
-        //         sanitizeCountryName(value)
-        //       )
-        //     )
-        // )
         setSuggestions(
           countries
             .filter((c:Country) =>
