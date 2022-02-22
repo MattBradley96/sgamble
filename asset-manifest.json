@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/sgamble/static/css/main.20cea46a.css",
-    "main.js": "/sgamble/static/js/main.9a57d4bb.js",
+    "main.js": "/sgamble/static/js/main.943dac0e.js",
     "static/js/787.cd1f2a99.chunk.js": "/sgamble/static/js/787.cd1f2a99.chunk.js",
     "service-worker.js": "/sgamble/service-worker.js",
     "index.html": "/sgamble/index.html",
     "main.20cea46a.css.map": "/sgamble/static/css/main.20cea46a.css.map",
-    "main.9a57d4bb.js.map": "/sgamble/static/js/main.9a57d4bb.js.map",
+    "main.943dac0e.js.map": "/sgamble/static/js/main.943dac0e.js.map",
     "787.cd1f2a99.chunk.js.map": "/sgamble/static/js/787.cd1f2a99.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.20cea46a.css",
-    "static/js/main.9a57d4bb.js"
+    "static/js/main.943dac0e.js"
   ]
 }
